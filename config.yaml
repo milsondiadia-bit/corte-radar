@@ -108,7 +108,7 @@ filtro:
 ia:
   ativo: true
   provedor: gemini            # gemini (gratuito) | claude (pago)
-  modelo: gemini-2.5-flash-lite
+  modelo: gemini-2.5-flash
   confianca_minima: 0.6
 
 # ------------------------------------------------------------

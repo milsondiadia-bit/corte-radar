@@ -89,7 +89,6 @@ def buscar_integra(post, analise: dict, cfg: dict) -> list[dict]:
                 "key": chave, "part": "snippet", "q": consulta,
                 "type": "video", "maxResults": 5, "order": "relevance",
                 "publishedAfter": depois.strftime("%Y-%m-%dT%H:%M:%SZ"),
-                "relevanceLanguage": "pt", "regionCode": "BR",
             }
             if canal_id:
                 params["channelId"] = canal_id

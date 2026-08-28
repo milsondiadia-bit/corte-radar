@@ -1,0 +1,163 @@
+# ============================================================
+# CORTE RADAR — OSINT / geopolítica internacional
+# Perfis em inglês. Legendas em inglês, áudio em vários idiomas.
+# ============================================================
+
+fonte: twitterapi_io
+intervalo: 120          # essas contas postam MUITO; 2 min é razoável
+pausa_entre_perfis: 6   # free tier do twitterapi.io = 0.2 QPS (1 req / 5s)
+max_idade_horas: 4      # ignora post mais velho que isso (evita enxurrada
+                        # quando o agendador fica parado e volta)
+
+perfis:
+  - MarioNawfal
+  - Osint613
+  - clashreport
+  - nexta_tv
+
+# ------------------------------------------------------------
+# FILTRO 1: heurística
+# ------------------------------------------------------------
+filtro:
+  duracao_min_seg: 8
+  duracao_max_seg: 420
+  score_minimo: 4
+
+  # Padrão "NOME:" no início da legenda — o sinal mais forte destas contas.
+  # Ex.: "TRUMP: We will not allow..."  /  "Putin: Russia is ready to..."
+  padrao_falante:
+    peso: 5
+    # rótulos que aparecem antes do nome e devem ser ignorados
+    prefixos_ignorar: [breaking, "just in", update, watch, new, alert, live,
+                       video, exclusive, report, urgent, developing, now,
+                       confirmed, "big news", "must watch", wow, thread]
+
+  # "Reporter:" / "Q:" — legenda em formato pergunta-e-resposta.
+  # Praticamente garante coletiva ou entrevista.
+  padrao_reporter:
+    peso: 6
+    termos: ["reporter:", "journalist:", "interviewer:", "q:", "question:",
+             "host:", "anchor:", "moderator:", "press:", "audience member:"]
+
+  verbos_fala:
+    peso: 2
+    termos: [says, said, tells, told, claims, claimed, states, declares,
+             declared, announces, announced, warns, warned, admits, admitted,
+             confirms, confirmed, denies, denied, slams, slammed, blasts,
+             blasted, responds, responded, "hits back", reveals, revealed,
+             threatens, threatened, vows, vowed, insists, insisted, urges,
+             urged, mocks, mocked, brags, boasts, snaps, rips, calls, accuses,
+             accused, suggests, refuses, refused, doubles down]
+
+  contexto:
+    peso: 3
+    termos: [interview, "press conference", presser, speech, address, remarks,
+             briefing, hearing, testimony, testifies, summit, panel, podcast,
+             "town hall", rally, "joint press conference", "general assembly",
+             "security council", davos, "oval office", "state of the union",
+             "q&a", debate, "press briefing", gaggle, doorstep, "sit-down",
+             "on camera", "in parliament", "in the knesset", "in the duma",
+             "cabinet meeting", deposition, "fireside chat", keynote]
+
+  gatilhos:
+    peso: 3
+    termos: ["asked about", "when asked", "after being asked", "in response to",
+             "in an interview with", "in an interview to", "speaking at",
+             "speaking to", "told reporters", "tells reporters", "in remarks",
+             "during his speech", "during her speech", "during a press",
+             "full clip", "full remarks", "watch:", "his words", "her words",
+             "on the record", "verbatim", "transcript"]
+
+  cargos:
+    peso: 2
+    termos: [president, "vice president", "prime minister", minister,
+             "foreign minister", "defense minister", "defence minister",
+             senator, congressman, congresswoman, secretary, "secretary of state",
+             ambassador, spokesperson, spokesman, general, admiral, chancellor,
+             governor, mayor, king, crown prince, "supreme leader", ayatollah,
+             pope, "chief of staff", "press secretary", "attorney general",
+             "national security adviser", "envoy", "chief", ceo,
+             kremlin, "white house", pentagon, "state department", "idf",
+             nato, "united nations", "un ", eu, imf, "federal reserve", "fed chair",
+             trump, putin, zelensky, netanyahu, xi, macron, erdogan, musk,
+             lavrov, rubio, vance, hegseth, medvedev, khamenei, orban, starmer]
+
+  aspas:
+    peso: 2
+
+  # Vocabulário de imagem de combate — NÃO é corte de fala.
+  # É penalidade, não descarte: um político pode estar FALANDO sobre um ataque.
+  penalidade_imagem:
+    peso: -4
+    termos: ["drone footage", "fpv drone", "footage shows", "video shows",
+             "cctv", "dashcam", "body cam", "the moment a", "the moment the",
+             "aftermath of", geolocated, "satellite images", "satellite imagery",
+             "smoke rises", "explosion in", "explosions heard", "air raid",
+             "sirens sounding", "intercepted over", "struck by", "hit by a",
+             "column of", "convoy of", "was destroyed", "burning after",
+             "under fire", "on the ground in", "first images", "raw footage"]
+
+  blacklist: [giveaway, "promo code", sponsored, "link in bio", "join my",
+              "sign up now", airdrop, presale, "not financial advice",
+              "spaces starting", "join the space", trailer, highlights,
+              "happy birthday", "good morning everyone"]
+
+# ------------------------------------------------------------
+# FILTRO 2: IA
+# ------------------------------------------------------------
+ia:
+  ativo: true
+  provedor: gemini            # gemini (gratuito) | claude (pago)
+  modelo: gemini-2.5-flash-lite
+  confianca_minima: 0.6
+
+# ------------------------------------------------------------
+# Transcrição
+# ------------------------------------------------------------
+transcricao:
+  ativo: true
+  modelo_whisper: small
+  idioma: null              # null = detecta sozinho (en, he, ru, ar, tr...)
+  traduzir_para_ingles: true  # clipe em russo/hebraico/árabe sai em inglês
+  max_segundos: 300
+
+# ------------------------------------------------------------
+# Deduplicação entre contas
+# ------------------------------------------------------------
+# Os 4 perfis se sobrepõem muito: o mesmo corte do Trump sai nos quatro.
+dedup:
+  ativo: true
+  janela_horas: 8
+  similaridade_minima: 0.72
+
+# ------------------------------------------------------------
+# Busca da íntegra
+# ------------------------------------------------------------
+buscar_integra:
+  ativo: true
+  janela_dias: 3
+  max_resultados: 6
+  # Preencha com: python tools/resolve_channels.py
+  canais_prioritarios: {}
+
+  # Nomes usados pelo resolve_channels.py para descobrir os IDs
+  canais_desejados:
+    - C-SPAN
+    - Forbes Breaking News
+    - The White House
+    - Reuters
+    - Associated Press
+    - Sky News
+    - LiveNOW from FOX
+    - Al Jazeera English
+    - i24NEWS English
+    - Bloomberg Television
+    - GB News
+    - Times Radio
+    - United Nations
+    - NATO
+    - TRT World
+
+notificar:
+  canal: telegram
+  enviar_video: false

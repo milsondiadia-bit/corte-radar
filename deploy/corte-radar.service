@@ -1,0 +1,38 @@
+# Instalar em: /etc/systemd/system/corte-radar.service
+# Ajuste User e os caminhos, depois:
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now corte-radar
+
+[Unit]
+Description=Corte Radar - detector de cortes de declaracao no X
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=radar
+WorkingDirectory=/opt/corte-radar
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/opt/corte-radar/.venv/bin/python -m radar.main
+
+Restart=always
+RestartSec=30
+
+# Evita que o Whisper coma a maquina inteira
+CPUQuota=150%
+MemoryMax=3G
+Nice=5
+
+# Isolamento basico
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/corte-radar
+
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=corte-radar
+
+[Install]
+WantedBy=multi-user.target

@@ -221,7 +221,8 @@ def classificar(video, chave):
         f"Channel: {video['canal']}\n"
         f"Title: {video['titulo']}\n"
         f"Duration: {formatar_duracao(video.get('seg'))}\n"
-        f"Was a livestream: {'yes' if video.get('foi_live') else 'no'}\n\n"
+        f"Was a livestream: {'yes' if video.get('foi_live') else 'no'}\n"
+        f"Currently live on air: {'yes' if video.get('no_ar') else 'no'}\n\n"
         f"Description:\n{video['descricao'][:1500]}"
     )
     corpo = json.dumps({
@@ -282,8 +283,9 @@ def enviar(video, analise, token, chat_id, seco=False):
         f"Quem fala: {escapar(quem)}",
         f"Tipo: {escapar(analise.get('tipo_evento') or '-')}",
         f"Assunto: {escapar(analise.get('assunto') or '-')}",
-        f"Duracao: {formatar_duracao(video.get('seg'))}"
-        + ("  ·  foi live" if video.get("foi_live") else ""),
+        ("Duracao: 🔴 AO VIVO AGORA" if video.get("no_ar")
+         else f"Duracao: {formatar_duracao(video.get('seg'))}"
+              + ("  ·  foi live" if video.get("foi_live") else "")),
         f"Canal: {escapar(video['canal'])}",
         f"Confianca: {int(float(analise.get('confianca', 0)) * 100)}%",
         "",
@@ -381,7 +383,10 @@ def main():
         v["seg"] = d.get("seg")
         v["foi_live"] = d.get("foi_live", False)
 
-        if v["seg"] is not None and v["seg"] < SEG_CURTO_DEMAIS:
+        # transmissao ainda no ar vem com duracao zero: nao e video curto
+        v["no_ar"] = bool(v["foi_live"]) and not v["seg"]
+
+        if not v["no_ar"] and v["seg"] is not None and v["seg"] < SEG_CURTO_DEMAIS:
             print(f"  ✗ curto demais ({formatar_duracao(v['seg'])}): {v['titulo'][:50]}")
             vistos.append(v["id"])
             continue

@@ -30,7 +30,10 @@ filtro:
     # rótulos que aparecem antes do nome e devem ser ignorados
     prefixos_ignorar: [breaking, "just in", update, watch, new, alert, live,
                        video, exclusive, report, urgent, developing, now,
-                       confirmed, "big news", "must watch", wow, thread]
+                       confirmed, "big news", "must watch", wow, thread,
+                       writer, editor, author, "written by", "story by",
+                       source, credit, photo, "op-ed", opinion, analysis,
+                       note, disclaimer, correction, "read more", "full story"]
 
   # "Reporter:" / "Q:" — legenda em formato pergunta-e-resposta.
   # Praticamente garante coletiva ou entrevista.
@@ -108,7 +111,7 @@ filtro:
 ia:
   ativo: true
   provedor: gemini            # gemini (gratuito) | claude (pago)
-  modelo: gemini-3-flash-preview
+  modelo: gemini-flash-lite-latest
   confianca_minima: 0.6
 
 # ------------------------------------------------------------

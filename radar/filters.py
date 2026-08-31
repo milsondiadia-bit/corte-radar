@@ -13,6 +13,11 @@ FALANTE = re.compile(
 # rótulo inicial a descascar: "🚨 BREAKING:", "JUST IN —", "WATCH |"
 ROTULO = re.compile(r"^[\W\d_]*([A-Za-z][A-Za-z\s]{1,18}?)\s*[:\|\-–—]\s*")
 ASPAS = re.compile(r'["“”][^"“”]{12,}["“”]')
+# Linha inteira que TERMINA em dois-pontos, anunciando quem fala logo abaixo:
+#   "Netanyahu on October 7:"
+#   "Mosab Hassan Yousef, former Hamas member and former Shin Bet informant:"
+# O padrao FALANTE nao pega esses porque tem palavra minuscula e virgula.
+FALANTE_LINHA = re.compile(r"^\s*([A-Z][^:\n]{1,90}):\s*$")
 
 
 def _normalizar(txt: str) -> str:
@@ -42,18 +47,39 @@ def _descascar_rotulos(texto: str, prefixos: list[str]) -> str:
     return texto.lstrip("\"'“ ")
 
 
+def _nome_valido(nome: str, prefixos: list[str]) -> bool:
+    nome = nome.strip()
+    if not nome or len(nome) > 90:
+        return False
+    palavras = nome.split()
+    if len(palavras) > 12:
+        return False
+    prefixos_norm = {_normalizar(p) for p in prefixos}
+    if _normalizar(nome) in prefixos_norm:
+        return False
+    # primeira palavra tambem nao pode ser rotulo ("Writer", "Breaking"...)
+    if _normalizar(palavras[0].rstrip(",")) in prefixos_norm:
+        return False
+    return True
+
+
 def detectar_falante(texto: str, prefixos: list[str]) -> str | None:
-    """Devolve o nome antes dos dois-pontos, se o padrão bater."""
+    """Devolve o nome antes dos dois-pontos, se algum dos padroes bater."""
     limpo = _descascar_rotulos(texto, prefixos)
-    for linha in limpo.split("\n")[:3]:
+    linhas = limpo.split("\n")[:4]
+
+    # padrao 1: "TRUMP: texto na mesma linha"
+    for linha in linhas:
         m = FALANTE.match(linha)
-        if m:
-            nome = m.group(1).strip()
-            if _normalizar(nome) in {_normalizar(p) for p in prefixos}:
-                continue
-            if len(nome) > 60:
-                continue
-            return nome
+        if m and _nome_valido(m.group(1), prefixos):
+            return m.group(1).strip()
+
+    # padrao 2: linha inteira terminando em dois-pontos
+    for linha in linhas:
+        m = FALANTE_LINHA.match(linha)
+        if m and _nome_valido(m.group(1), prefixos):
+            return m.group(1).strip()
+
     return None
 
 

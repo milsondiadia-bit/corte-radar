@@ -1,0 +1,40 @@
+name: YouTube Radar
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: youtube-radar
+  cancel-in-progress: false
+
+jobs:
+  varrer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Varrer canais
+        env:
+          YOUTUBE_API_KEY:    ${{ secrets.YOUTUBE_API_KEY }}
+          GEMINI_API_KEY:     ${{ secrets.GEMINI_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID:   ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python youtube_radar.py --horas 12
+
+      - name: Salvar historico
+        run: |
+          git config user.name "radar-bot"
+          git config user.email "bot@radar"
+          git add youtube_vistos.json || true
+          git diff --staged --quiet || git commit -m "historico youtube"
+          git pull --rebase || true
+          git push || true

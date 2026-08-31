@@ -85,13 +85,15 @@ def processar_perfil(fonte, con, usuario, cfg):
             log.warning("    classificação falhou: %s", e)
             analise = None
 
-        if analise is not None:
-            if not analise.get("eh_corte"):
-                log.info("    ✗ IA descartou")
-                continue
-            if analise.get("confianca", 0) < cfg["ia"]["confianca_minima"]:
-                log.info("    ✗ confiança baixa (%.2f)", analise.get("confianca", 0))
-                continue
+        if analise is None:
+            log.info("    ✗ IA nao respondeu — nao envio sem analise")
+            continue
+        if not analise.get("eh_corte"):
+            log.info("    ✗ IA descartou")
+            continue
+        if analise.get("confianca", 0) < cfg["ia"]["confianca_minima"]:
+            log.info("    ✗ confiança baixa (%.2f)", analise.get("confianca", 0))
+            continue
 
         try:
             integras = enrich.buscar_integra(post, analise, cfg)

@@ -102,8 +102,13 @@ def salvar_historico(ids):
         json.dump(ids, f, ensure_ascii=False, indent=1)
 
 
-def eh_lixo(titulo, descricao):
-    texto = f"{titulo} {descricao}".lower()
+def eh_lixo(titulo, descricao=None):
+    """
+    Olha SO o titulo. A descricao nao serve: muitos canais repetem a mesma
+    apresentacao em todo video, e palavras como "showbiz" e "sports"
+    aparecem ali mesmo em live de coletiva.
+    """
+    texto = (titulo or "").lower()
     for termo in LIXO:
         if termo in texto:
             return termo
@@ -361,7 +366,7 @@ def main():
     # descarta lixo obvio antes de gastar cota
     filtrados = []
     for v in candidatos:
-        termo = eh_lixo(v["titulo"], v["descricao"])
+        termo = eh_lixo(v["titulo"])
         if termo:
             print(f"  ✗ lixo ({termo}): {v['titulo'][:60]}")
             vistos.append(v["id"])

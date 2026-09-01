@@ -70,10 +70,15 @@ Reply with JSON only. No markdown, no code fences.
   "aproveitavel": true,
   "confianca": 0.0,
   "quem_fala": "name and title, or null",
+  "quem_fala_pt": "name and title in BRAZILIAN PORTUGUESE, or null",
   "tipo_evento": "interview|press_conference|speech|session|hearing|testimony|doorstep|statement|debate|other",
+  "tipo_evento_pt": "the event type in BRAZILIAN PORTUGUESE (entrevista, coletiva de imprensa, discurso, sessao, audiencia, depoimento, declaracao a imprensa, declaracao, debate, outro)",
+  "titulo_pt": "faithful translation of the video title into BRAZILIAN PORTUGUESE",
   "assunto": "topic in up to 12 words, in Portuguese",
   "motivo": "one short sentence in Portuguese"
-}"""
+}
+
+IMPORTANT: fields ending in _pt, plus "assunto" and "motivo", must ALWAYS be written in Brazilian Portuguese, even when the video is in another language. Translate, do not transliterate."""
 
 
 # ---------------------------------------------------------------
@@ -268,20 +273,44 @@ def escapar(txt):
     return (txt or "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
+TIPOS_PT = {
+    "interview": "entrevista",
+    "press_conference": "coletiva de imprensa",
+    "speech": "discurso",
+    "session": "sessao",
+    "hearing": "audiencia",
+    "testimony": "depoimento",
+    "doorstep": "declaracao a imprensa",
+    "statement": "declaracao",
+    "debate": "debate",
+    "other": "outro",
+}
+
+
 def enviar(video, analise, token, chat_id, seco=False):
     if video["classe"] == "completo":
         cabeca = "🎙 <b>ENTREVISTA / MATERIAL COMPLETO</b>"
     else:
         cabeca = "✂️ <b>CORTE DE FALA</b>"
 
-    quem = analise.get("quem_fala") or "nao identificado"
+    quem = analise.get("quem_fala_pt") or analise.get("quem_fala") or "nao identificado"
+
+    tipo_bruto = analise.get("tipo_evento") or "-"
+    tipo = analise.get("tipo_evento_pt") or TIPOS_PT.get(tipo_bruto, tipo_bruto)
+
+    original = video["titulo"]
+    titulo = analise.get("titulo_pt") or original
+    bloco_titulo = f"<b>{escapar(titulo)}</b>"
+    if titulo.strip().lower() != original.strip().lower():
+        bloco_titulo += f"\n<i>{escapar(original)}</i>"
+
     linhas = [
         cabeca,
         "",
-        f"<b>{escapar(video['titulo'])}</b>",
+        bloco_titulo,
         "",
         f"Quem fala: {escapar(quem)}",
-        f"Tipo: {escapar(analise.get('tipo_evento') or '-')}",
+        f"Tipo: {escapar(tipo)}",
         f"Assunto: {escapar(analise.get('assunto') or '-')}",
         ("Duracao: 🔴 AO VIVO AGORA" if video.get("no_ar")
          else f"Duracao: {formatar_duracao(video.get('seg'))}"

@@ -16,6 +16,8 @@ NOT a speaking clip: combat or drone footage, aftermath of strikes, CCTV or dash
 
 Beware: many of these accounts repackage clips with their own voiceover or subtitles. If the audio is a narrator summarizing what someone said rather than the person's own voice, set eh_corte to false.
 
+IMPORTANT: the fields ending in _pt, plus "assunto", must ALWAYS be written in Brazilian Portuguese, even when the source material is in another language. Translate, do not transliterate.
+
 Reply with JSON only. No markdown, no code fences.
 {
   "eh_corte": true,
@@ -24,7 +26,11 @@ Reply with JSON only. No markdown, no code fences.
   "tipo_evento": "interview|press_conference|speech|address|hearing|testimony|session|podcast|doorstep|statement|other",
   "veiculo_ou_local": "outlet, program, venue or institution, or null",
   "idioma_original": "ISO code of what is spoken, or null",
-  "assunto": "topic in up to 12 words",
+  "assunto": "topic in up to 12 words, written in BRAZILIAN PORTUGUESE",
+  "quem_fala_pt": "name and title in BRAZILIAN PORTUGUESE, or null",
+  "tipo_evento_pt": "the event type in BRAZILIAN PORTUGUESE (entrevista, coletiva de imprensa, discurso, pronunciamento, audiencia, depoimento, sessao, podcast, declaracao a imprensa, outro)",
+  "veiculo_ou_local_pt": "outlet, program, venue or institution in BRAZILIAN PORTUGUESE, or null",
+  "transcricao_pt": "faithful translation into BRAZILIAN PORTUGUESE of what the person actually says, up to 600 characters, or null if there is no transcript",
   "data_provavel_evento": "YYYY-MM-DD if inferable, else null",
   "termos_busca": ["3-5 search queries in the ORIGINAL language to find the full recording"],
   "onde_procurar": ["likely sources: C-SPAN, White House, Kremlin.ru, Knesset channel, UN Web TV, broadcaster"]

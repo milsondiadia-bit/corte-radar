@@ -95,15 +95,11 @@ def processar_perfil(fonte, con, usuario, cfg):
             log.info("    ✗ confiança baixa (%.2f)", analise.get("confianca", 0))
             continue
 
-        try:
-            integras = enrich.buscar_integra(post, analise, cfg)
-        except Exception as e:
-            log.warning("    busca da íntegra falhou: %s", e)
-            integras = []
+        integras = []
 
         db.salvar_alerta(con, post, analise, integras, transcricao)
         notify.enviar(post, analise, integras, motivos, transcricao, cfg)
-        log.info("    ✓ ALERTA enviado (%d íntegras sugeridas)", len(integras))
+        log.info("    ✓ ALERTA enviado")
 
 
 def rodada(fonte, con, cfg):

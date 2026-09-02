@@ -1,21 +1,2 @@
-17:31:34  INFO    varrendo 4 perfis…
-    busca unica (4 perfis): 19 posts cobrados (~285 creditos)
-17:31:36  INFO      → candidato @Osint613 2095201492152041645 (score 4) — analisando…
-17:31:37  INFO    HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
-17:31:37  INFO    HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
-17:31:38  INFO    Processing audio with duration 01:13.166
-[0;93m2026-09-02 17:31:38.638413920 [W:onnxruntime:Default, device_discovery.cc:146 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
-17:31:38  INFO    VAD filter removed 00:15.870 of audio
-17:31:39  INFO    Detected language 'he' with probability 0.98
-17:31:51  INFO        áudio em 'he'
-17:32:32  WARNING     classificação falhou: Gemini falhou (404 em v1: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-flash-lite-latest is not found for API version v1, or is not supported for generateConte). Modelo: gemini-flash-lite-latest
-17:32:32  INFO        ✗ IA nao respondeu — nao envio sem analise
-17:32:32  INFO      → candidato @nexta_tv 2095202595597910061 (score 4) — analisando…
-17:32:32  INFO    Processing audio with duration 00:13.700
-17:32:32  INFO    VAD filter removed 00:08.724 of audio
-17:32:33  INFO    Detected language 'en' with probability 0.99
-17:32:34  INFO        áudio em 'en'
-17:32:43  INFO        ✓ ALERTA enviado
+17:46:13  INFO    varrendo 4 perfis…
+    busca unica (4 perfis): 4 posts cobrados (~60 creditos)

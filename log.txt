@@ -1,11 +1,13 @@
-20:15:58  INFO    varrendo 4 perfis…
-    busca unica (4 perfis): 10 posts cobrados (~150 creditos)
-20:16:00  INFO      → candidato @MarioNawfal 2095241098742649275 (score 4) — analisando…
-20:16:01  INFO    HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
-20:16:01  INFO    HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
-20:16:02  INFO    Processing audio with duration 01:59.125
-[0;93m2026-09-02 20:16:02.064092706 [W:onnxruntime:Default, device_discovery.cc:146 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
-20:16:02  INFO    VAD filter removed 00:00.000 of audio
-20:16:04  INFO    Detected language 'en' with probability 0.99
-20:16:34  INFO        áudio em 'en'
-20:16:36  INFO        ✗ IA descartou
+20:32:07  INFO    varrendo 4 perfis…
+    busca unica (4 perfis): 13 posts cobrados (~195 creditos)
+20:32:09  INFO      → candidato @MarioNawfal 2095244873393922359 (score 6) — analisando…
+20:32:16  INFO    HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
+20:32:16  INFO    HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
+20:32:18  INFO    Processing audio with duration 02:14.720
+[0;93m2026-09-02 20:32:18.228814683 [W:onnxruntime:Default, device_discovery.cc:146 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+20:32:18  INFO    VAD filter removed 00:00.000 of audio
+20:32:19  INFO    Detected language 'en' with probability 0.93
+20:32:52  INFO        áudio em 'en'
+20:32:56  INFO        ✓ ALERTA enviado
+20:32:56  INFO      ✗ @MarioNawfal 2095245600140759276 (score 0)
+20:32:56  INFO      ✗ @MarioNawfal 2095247894232052220 (score 0)

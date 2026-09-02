@@ -37,12 +37,13 @@ def carregar_config():
         return yaml.safe_load(fh)
 
 
-def processar_perfil(fonte, con, usuario, cfg):
-    try:
-        posts = fonte.posts_recentes(usuario, db.since_id(con, usuario))
-    except Exception as e:
-        log.warning("falha ao ler @%s: %s", usuario, e)
-        return
+def processar_perfil(fonte, con, usuario, cfg, posts=None):
+    if posts is None:
+        try:
+            posts = fonte.posts_recentes(usuario, db.since_id(con, usuario))
+        except Exception as e:
+            log.warning("falha ao ler @%s: %s", usuario, e)
+            return
 
     for post in sorted(posts, key=lambda p: p.criado_em):
         if db.ja_visto(con, post.id):
@@ -103,12 +104,26 @@ def processar_perfil(fonte, con, usuario, cfg):
 
 
 def rodada(fonte, con, cfg):
-    log.info("varrendo %d perfis…", len(cfg["perfis"]))
+    perfis = cfg["perfis"]
+    log.info("varrendo %d perfis…", len(perfis))
+
+    # Uma consulta so para todos os perfis: paga-se um minimo em vez de
+    # um por perfil. Se falhar, cai no modo antigo, perfil a perfil.
+    lote = None
+    if hasattr(fonte, "posts_recentes_lote"):
+        try:
+            since = {u: db.since_id(con, u) for u in perfis}
+            lote = fonte.posts_recentes_lote(perfis, since)
+        except Exception as e:
+            log.warning("busca unica falhou (%s) — indo perfil a perfil", e)
+            lote = None
+
     pausa = cfg.get("pausa_entre_perfis", 6)
-    for i, usuario in enumerate(cfg["perfis"]):
-        if i:
+    for i, usuario in enumerate(perfis):
+        if lote is None and i:
             time.sleep(pausa)   # free tier do twitterapi.io = 0.2 QPS
-        processar_perfil(fonte, con, usuario, cfg)
+        processar_perfil(fonte, con, usuario, cfg,
+                         lote.get(usuario) if lote is not None else None)
 
 
 def testar_texto(texto, cfg):

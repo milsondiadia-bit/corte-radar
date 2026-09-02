@@ -3,13 +3,29 @@ Adaptadores de fonte de dados do X.
 
 Todos devolvem a mesma estrutura (Post), então trocar de fornecedor
 é mudar uma linha no config.yaml.
+
+ECONOMIA (twitterapi.io):
+    Antes: /user/last_tweets devolvia os 20 posts mais recentes de cada
+    perfil, sempre. Pagava-se pelos 20 e o descarte (post ja visto, post
+    sem video, resposta) acontecia depois, no seu lado.
+
+    Agora: /tweet/advanced_search com tres filtros embutidos na consulta —
+    since_time (so o que e novo), filter:videos (so post com video) e
+    -filter:replies (sem respostas). A API devolve so o que interessa
+    e a cobranca cai junto.
 """
 import os
 from dataclasses import dataclass, field
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from typing import Optional
 
 import requests
+
+# Epoch do Twitter: usado para descobrir a data a partir do ID do post.
+EPOCH_TWITTER_MS = 1288834974657
+
+# Teto da janela de busca. Se o bot ficar parado, nao volta mais que isso.
+JANELA_MAXIMA_HORAS = 4
 
 
 @dataclass
@@ -29,6 +45,19 @@ class FonteBase:
         raise NotImplementedError
 
 
+def _data_do_id(tweet_id):
+    """
+    O ID do post do X carrega dentro de si o horario em que foi criado.
+    Serve para transformar 'ja vi ate o post X' em 'busque a partir das Yh',
+    sem precisar de nenhuma chamada extra.
+    """
+    try:
+        ms = (int(tweet_id) >> 22) + EPOCH_TWITTER_MS
+        return datetime.fromtimestamp(ms / 1000, tz=timezone.utc)
+    except (TypeError, ValueError):
+        return None
+
+
 # ---------------------------------------------------------------- #
 # 1) twitterapi.io  — ~US$0,15 por 1.000 tweets lidos
 #    Alternativas equivalentes: Apify, ScrapeCreators, SocialCrawl.
@@ -40,14 +69,50 @@ class TwitterApiIO(FonteBase):
         self.key = os.environ["TWITTERAPI_IO_KEY"]
 
     def posts_recentes(self, usuario, since_id=None):
-        r = requests.get(
-            f"{self.BASE}/user/last_tweets",
-            headers={"X-API-Key": self.key},
-            params={"userName": usuario, "includeReplies": "false"},
-            timeout=30,
+        agora = datetime.now(timezone.utc)
+
+        # De onde comecar a buscar: do ultimo post ja visto, ou do teto.
+        desde = _data_do_id(since_id) if since_id else None
+        mais_antigo = agora - timedelta(hours=JANELA_MAXIMA_HORAS)
+        if desde is None or desde < mais_antigo:
+            desde = mais_antigo
+
+        # folga de 1 min para nao perder post na virada da rodada
+        desde_ts = int((desde - timedelta(minutes=1)).timestamp())
+
+        consulta = (
+            f"from:{usuario} since_time:{desde_ts} "
+            "filter:videos -filter:replies"
         )
-        r.raise_for_status()
-        bruto = r.json().get("data", {}).get("tweets", []) or r.json().get("tweets", [])
+
+        bruto, cursor, pagina, cobrados = [], None, 0, 0
+        while pagina < 2:
+            params = {"query": consulta, "queryType": "Latest"}
+            if cursor:
+                params["cursor"] = cursor
+
+            r = requests.get(
+                f"{self.BASE}/tweet/advanced_search",
+                headers={"X-API-Key": self.key},
+                params=params,
+                timeout=30,
+            )
+            r.raise_for_status()
+            dados = r.json()
+
+            lote = dados.get("tweets") or []
+            cobrados += len(lote)
+            bruto.extend(lote)
+
+            if not lote or not dados.get("has_next_page"):
+                break
+            cursor = dados.get("next_cursor")
+            if not cursor:
+                break
+            pagina += 1
+
+        print(f"    @{usuario}: {cobrados} posts cobrados "
+              f"(~{cobrados * 15} creditos)")
 
         posts = []
         for t in bruto:

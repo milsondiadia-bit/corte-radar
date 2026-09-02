@@ -68,6 +68,94 @@ class TwitterApiIO(FonteBase):
     def __init__(self):
         self.key = os.environ["TWITTERAPI_IO_KEY"]
 
+    def _janela(self, since_id, agora):
+        """De que horario em diante buscar, para este perfil."""
+        desde = _data_do_id(since_id) if since_id else None
+        mais_antigo = agora - timedelta(hours=JANELA_MAXIMA_HORAS)
+        if desde is None or desde < mais_antigo:
+            desde = mais_antigo
+        return desde
+
+    def _buscar(self, consulta):
+        """Roda a consulta e devolve (lista_de_tweets, quantos_foram_cobrados)."""
+        bruto, cursor, pagina, cobrados = [], None, 0, 0
+        while pagina < 3:
+            params = {"query": consulta, "queryType": "Latest"}
+            if cursor:
+                params["cursor"] = cursor
+
+            r = requests.get(
+                f"{self.BASE}/tweet/advanced_search",
+                headers={"X-API-Key": self.key},
+                params=params,
+                timeout=30,
+            )
+            r.raise_for_status()
+            dados = r.json()
+
+            lote = dados.get("tweets") or []
+            cobrados += len(lote)
+            bruto.extend(lote)
+
+            if not lote or not dados.get("has_next_page"):
+                break
+            cursor = dados.get("next_cursor")
+            if not cursor:
+                break
+            pagina += 1
+        return bruto, cobrados
+
+    def _montar(self, t, usuario_padrao=None):
+        """Transforma o tweet cru em Post. Devolve None se nao tiver video."""
+        tid = str(t.get("id"))
+        autor = (t.get("author") or {}).get("userName") or usuario_padrao or ""
+        video_url, dur = self._extrair_video(t)
+        if not video_url:
+            return None
+        return Post(
+            id=tid,
+            autor=autor,
+            texto=t.get("text", ""),
+            url=t.get("url") or f"https://x.com/{autor}/status/{tid}",
+            criado_em=self._data(t.get("createdAt")),
+            video_url=video_url,
+            duracao_seg=dur,
+        )
+
+    def posts_recentes_lote(self, perfis, since_ids):
+        """
+        Busca os posts de TODOS os perfis numa consulta so.
+
+        ECONOMIA: a twitterapi.io cobra um minimo por chamada, mesmo quando
+        ela volta vazia. Quatro perfis em quatro chamadas pagavam quatro
+        minimos por rodada; agrupados, paga-se um.
+        """
+        agora = datetime.now(timezone.utc)
+
+        # a janela tem que cobrir o perfil mais atrasado de todos
+        desde = min(self._janela(since_ids.get(u), agora) for u in perfis)
+        desde_ts = int((desde - timedelta(minutes=1)).timestamp())
+
+        grupo = "(" + " OR ".join(f"from:{u}" for u in perfis) + ")"
+        consulta = f"{grupo} since_time:{desde_ts} filter:videos -filter:replies"
+
+        bruto, cobrados = self._buscar(consulta)
+        print(f"    busca unica ({len(perfis)} perfis): {cobrados} posts "
+              f"cobrados (~{cobrados * 15} creditos)")
+
+        saida = {u: [] for u in perfis}
+        for t in bruto:
+            post = self._montar(t)
+            if not post:
+                continue
+            if post.autor not in saida:
+                continue
+            corte = since_ids.get(post.autor)
+            if corte and post.id <= str(corte):
+                continue
+            saida[post.autor].append(post)
+        return saida
+
     def posts_recentes(self, usuario, since_id=None):
         agora = datetime.now(timezone.utc)
 

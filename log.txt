@@ -1,17 +1,6 @@
-13:32:03  INFO    varrendo 4 perfis…
-    busca unica (4 perfis): 10 posts cobrados (~150 creditos)
-13:32:05  INFO      → candidato @clashreport 2095142676056219763 (score 7) — analisando…
-13:32:06  INFO    HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
-13:32:06  INFO    HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
-13:32:07  INFO    Processing audio with duration 01:06.987
-[0;93m2026-09-02 13:32:07.281260908 [W:onnxruntime:Default, device_discovery.cc:146 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/VMBUS:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
-13:32:07  INFO    VAD filter removed 00:00.112 of audio
-13:32:09  INFO    Detected language 'en' with probability 0.83
-13:32:21  INFO        áudio em 'en'
-13:32:28  INFO        ✓ ALERTA enviado
-13:32:28  INFO      → candidato @nexta_tv 2095141159571992899 (score 4) — analisando…
-13:32:29  INFO    Processing audio with duration 01:04.459
-13:32:29  INFO    VAD filter removed 00:31.179 of audio
-13:32:31  INFO    Detected language 'es' with probability 0.87
-13:32:38  INFO        áudio em 'es'
-13:32:41  INFO        ✓ ALERTA enviado
+13:51:01  INFO    varrendo 4 perfis…
+    busca unica (4 perfis): 13 posts cobrados (~195 creditos)
+13:51:03  INFO      ✗ @MarioNawfal 2095144713582240015 (score 2)
+13:51:03  INFO      ✗ @MarioNawfal 2095147230114050221 (score -1)
+13:51:03  INFO      ✗ @Osint613 2095145946686411022 (score 2)
+13:51:03  INFO      ✗ @nexta_tv 2095146726747484399 (score 2)

@@ -1,0 +1,6 @@
+10:52:05  INFO    varrendo 4 perfis…
+    @MarioNawfal: 1 posts cobrados (~15 creditos)
+    @Osint613: 2 posts cobrados (~30 creditos)
+10:52:13  INFO      ✗ @Osint613 2095101540834951560 (score 0)
+    @clashreport: 1 posts cobrados (~15 creditos)
+    @nexta_tv: 1 posts cobrados (~15 creditos)

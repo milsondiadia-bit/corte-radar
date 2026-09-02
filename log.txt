@@ -1,11 +1,20 @@
-14:45:50  INFO    varrendo 4 perfis…
-    busca unica (4 perfis): 11 posts cobrados (~165 creditos)
-14:45:52  INFO      → candidato @MarioNawfal 2095159812845933018 (score 7) — analisando…
-14:45:53  INFO    HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
-14:45:53  INFO    HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
-14:45:54  INFO    Processing audio with duration 00:27.028
-[0;93m2026-09-02 14:45:54.337204258 [W:onnxruntime:Default, device_discovery.cc:146 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
-14:45:54  INFO    VAD filter removed 00:01.360 of audio
-14:45:56  INFO    Detected language 'en' with probability 0.98
-14:46:02  INFO        áudio em 'en'
-14:46:05  INFO        ✓ ALERTA enviado
+15:05:51  INFO    varrendo 4 perfis…
+    busca unica (4 perfis): 16 posts cobrados (~240 creditos)
+15:05:53  INFO      ✗ @MarioNawfal 2095162329478607247 (score 0)
+15:05:53  INFO      ✗ @MarioNawfal 2095164856907489623 (score 0)
+15:05:53  INFO      ✗ @Osint613 2095161502181269738 (score 2)
+15:05:53  INFO      → candidato @clashreport 2095163869702377503 (score 4) — analisando…
+15:05:53  INFO    HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
+15:05:53  INFO    HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
+15:05:54  INFO    Processing audio with duration 00:24.381
+[0;93m2026-09-02 15:05:54.418351089 [W:onnxruntime:Default, device_discovery.cc:146 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+15:05:54  INFO    VAD filter removed 00:24.381 of audio
+15:05:56  INFO    Detected language 'en' with probability 0.33
+15:05:56  INFO        áudio em 'en'
+15:06:50  INFO        ✗ IA descartou
+15:06:50  INFO      → candidato @nexta_tv 2095162528330375184 (score 9) — analisando…
+15:06:50  INFO    Processing audio with duration 00:29.696
+15:06:50  INFO    VAD filter removed 00:14.304 of audio
+15:06:52  INFO    Detected language 'de' with probability 0.97
+15:06:56  INFO        áudio em 'de'
+15:07:09  INFO        ✓ ALERTA enviado

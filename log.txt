@@ -1,13 +1,12 @@
-20:32:07  INFO    varrendo 4 perfis…
-    busca unica (4 perfis): 13 posts cobrados (~195 creditos)
-20:32:09  INFO      → candidato @MarioNawfal 2095244873393922359 (score 6) — analisando…
-20:32:16  INFO    HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
-20:32:16  INFO    HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
-20:32:18  INFO    Processing audio with duration 02:14.720
-[0;93m2026-09-02 20:32:18.228814683 [W:onnxruntime:Default, device_discovery.cc:146 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
-20:32:18  INFO    VAD filter removed 00:00.000 of audio
-20:32:19  INFO    Detected language 'en' with probability 0.93
-20:32:52  INFO        áudio em 'en'
-20:32:56  INFO        ✓ ALERTA enviado
-20:32:56  INFO      ✗ @MarioNawfal 2095245600140759276 (score 0)
-20:32:56  INFO      ✗ @MarioNawfal 2095247894232052220 (score 0)
+20:45:53  INFO    varrendo 4 perfis…
+    busca unica (4 perfis): 15 posts cobrados (~225 creditos)
+20:45:56  INFO      → candidato @MarioNawfal 2095248648443744277 (score 6) — analisando…
+20:45:57  INFO    HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
+20:45:57  INFO    HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
+20:45:58  INFO    Processing audio with duration 04:48.491
+[0;93m2026-09-02 20:45:58.939916868 [W:onnxruntime:Default, device_discovery.cc:146 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+20:45:59  INFO    VAD filter removed 00:00.000 of audio
+20:46:00  INFO    Detected language 'en' with probability 0.96
+20:46:57  INFO        áudio em 'en'
+20:47:08  INFO        ✓ ALERTA enviado
+20:47:08  INFO      ✗ @MarioNawfal 2095251668027769302 (score 0)

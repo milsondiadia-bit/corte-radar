@@ -1,2 +1,29 @@
-13:31:50  INFO    varrendo 4 perfis…
-    busca unica (4 perfis): 4 posts cobrados (~60 creditos)
+13:46:28  INFO    varrendo 4 perfis…
+    busca unica (4 perfis): 8 posts cobrados (~120 creditos)
+13:46:30  INFO      → candidato @clashreport 2095505783282683923 (score 7) — analisando…
+13:46:31  INFO    HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
+13:46:31  INFO    HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
+13:46:32  INFO    Processing audio with duration 00:14.144
+[0;93m2026-09-03 13:46:32.532750474 [W:onnxruntime:Default, device_discovery.cc:146 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/VMBUS:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+13:46:32  INFO    VAD filter removed 00:00.000 of audio
+13:46:34  INFO    Detected language 'en' with probability 1.00
+13:46:37  INFO        áudio em 'en'
+13:46:38  INFO        ✓ ALERTA enviado
+13:46:38  INFO      → candidato @clashreport 2095506711310152048 (score 7) — analisando…
+13:46:38  INFO    Processing audio with duration 00:22.293
+13:46:38  INFO    VAD filter removed 00:00.000 of audio
+13:46:40  INFO    Detected language 'en' with probability 0.98
+13:46:45  INFO        áudio em 'en'
+13:46:57  INFO        ✓ ALERTA enviado
+13:46:57  INFO      → candidato @clashreport 2095506918781415526 (score 9) — analisando…
+13:46:57  INFO    Processing audio with duration 00:13.461
+13:46:57  INFO    VAD filter removed 00:00.000 of audio
+13:46:59  INFO    Detected language 'en' with probability 0.99
+13:47:03  INFO        áudio em 'en'
+13:47:59  INFO        ✓ ALERTA enviado
+13:47:59  INFO      → candidato @nexta_tv 2095507101716209779 (score 14) — analisando…
+13:47:59  INFO    Processing audio with duration 00:43.027
+13:47:59  INFO    VAD filter removed 00:00.000 of audio
+13:48:00  INFO    Detected language 'ru' with probability 0.99
+13:48:09  INFO        áudio em 'ru'
+13:48:10  INFO        ✓ ALERTA enviado

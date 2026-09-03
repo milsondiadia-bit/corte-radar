@@ -1,17 +1,44 @@
-17:46:14  INFO    varrendo 4 perfis…
-    busca unica (4 perfis): 7 posts cobrados (~105 creditos)
-17:46:16  INFO      → candidato @MarioNawfal 2095567499290919411 (score 4) — analisando…
-17:46:17  INFO    HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
-17:46:17  INFO    HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
-17:46:18  INFO    Processing audio with duration 00:28.026
-[0;93m2026-09-03 17:46:18.476093263 [W:onnxruntime:Default, device_discovery.cc:146 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
-17:46:18  INFO    VAD filter removed 00:00.048 of audio
-17:46:19  INFO    Detected language 'es' with probability 0.95
-17:46:22  INFO        áudio em 'es'
-17:46:37  INFO        ✓ ALERTA enviado
-17:46:37  INFO      → candidato @nexta_tv 2095568807511179298 (score 9) — analisando…
-17:46:37  INFO    Processing audio with duration 00:33.181
-17:46:37  INFO    VAD filter removed 00:00.000 of audio
-17:46:38  INFO    Detected language 'uk' with probability 0.88
-17:46:43  INFO        áudio em 'uk'
-17:47:39  INFO        ✓ ALERTA enviado
+18:00:57  INFO    varrendo 4 perfis…
+    busca unica (4 perfis): 16 posts cobrados (~240 creditos)
+18:00:59  INFO      ✗ @MarioNawfal 2095569265873260993 (score -1)
+18:00:59  INFO      ✗ @MarioNawfal 2095570016120754621 (score 2)
+18:00:59  INFO      → candidato @Osint613 2095570891543593304 (score 4) — analisando…
+18:01:00  INFO    HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
+18:01:00  INFO    HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
+18:01:01  INFO    Processing audio with duration 01:02.555
+[0;93m2026-09-03 18:01:01.487383979 [W:onnxruntime:Default, device_discovery.cc:146 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+18:01:01  INFO    VAD filter removed 00:00.000 of audio
+18:01:03  INFO    Detected language 'he' with probability 0.99
+18:01:19  INFO        áudio em 'he'
+18:01:44  INFO        ✓ ALERTA enviado
+18:01:44  INFO      → candidato @Osint613 2095571921727561955 (score 4) — analisando…
+18:01:44  INFO    Processing audio with duration 01:57.205
+18:01:44  INFO    VAD filter removed 00:00.000 of audio
+18:01:46  INFO    Detected language 'en' with probability 1.00
+18:02:18  INFO        áudio em 'en'
+18:02:20  INFO        ✓ ALERTA enviado
+18:02:20  INFO      → candidato @clashreport 2095569229781069903 (score 7) — analisando…
+18:02:20  INFO    Processing audio with duration 00:27.029
+18:02:20  INFO    VAD filter removed 00:00.000 of audio
+18:02:22  INFO    Detected language 'en' with probability 1.00
+18:02:27  INFO        áudio em 'en'
+18:02:49  INFO        ✓ ALERTA enviado
+18:02:49  INFO      → candidato @clashreport 2095570320706998398 (score 7) — analisando…
+18:02:49  INFO    Processing audio with duration 00:09.152
+18:02:49  INFO    VAD filter removed 00:00.000 of audio
+18:02:51  INFO    Detected language 'en' with probability 1.00
+18:02:54  INFO        áudio em 'en'
+18:02:56  INFO        ✓ ALERTA enviado
+18:02:56  INFO      → candidato @clashreport 2095572045392117905 (score 7) — analisando…
+18:02:56  INFO    Processing audio with duration 00:23.552
+18:02:56  INFO    VAD filter removed 00:00.000 of audio
+18:02:58  INFO    Detected language 'en' with probability 1.00
+18:03:03  INFO        áudio em 'en'
+18:03:05  INFO        ✓ ALERTA enviado
+18:03:05  INFO      ✗ @clashreport 2095572753692643339 (score 2)
+18:03:05  INFO      → candidato @nexta_tv 2095572539992953072 (score 4) — analisando…
+18:03:06  INFO    Processing audio with duration 00:42.167
+18:03:06  INFO    VAD filter removed 00:00.000 of audio
+18:03:07  INFO    Detected language 'ru' with probability 0.98
+18:03:18  INFO        áudio em 'ru'
+18:03:20  INFO        ✓ ALERTA enviado

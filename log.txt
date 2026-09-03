@@ -1,12 +1,2 @@
-16:45:59  INFO    varrendo 4 perfis…
+17:01:07  INFO    varrendo 4 perfis…
     busca unica (4 perfis): 14 posts cobrados (~210 creditos)
-16:46:01  INFO      → candidato @Osint613 2095550265441108387 (score 9) — analisando…
-16:46:03  INFO    HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
-16:46:03  INFO    HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
-16:46:04  INFO    Processing audio with duration 00:53.150
-[0;93m2026-09-03 16:46:04.582456122 [W:onnxruntime:Default, device_discovery.cc:146 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
-16:46:04  INFO    VAD filter removed 00:04.446 of audio
-16:46:05  INFO    Detected language 'he' with probability 0.96
-16:46:14  INFO        áudio em 'he'
-16:46:18  INFO        ✓ ALERTA enviado
-16:46:18  INFO      ✗ @clashreport 2095553158420259129 (score 3)

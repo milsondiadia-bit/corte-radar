@@ -1,3 +1,176 @@
-22:45:52  INFO    varrendo 4 perfis…
-    busca unica (4 perfis): 6 posts cobrados (~90 creditos)
-22:45:53  INFO      ✗ @Osint613 2095281548429853167 (score -1)
+09:01:02  INFO    varrendo 4 perfis…
+    busca unica (4 perfis): 41 posts cobrados (~615 creditos)
+09:01:05  INFO      ✗ @MarioNawfal 2095383456276455855 (score 2)
+09:01:05  INFO      ✗ @MarioNawfal 2095396371700314153 (score 2)
+09:01:05  INFO      ✗ @MarioNawfal 2095403921212854387 (score 0)
+09:01:05  INFO      ✗ @MarioNawfal 2095408954419617959 (score 2)
+09:01:05  INFO      → candidato @MarioNawfal 2095411470938866062 (score 4) — analisando…
+09:01:06  INFO    HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
+09:01:06  INFO    HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
+09:01:07  INFO    Processing audio with duration 02:48.683
+[0;93m2026-09-03 09:01:07.207229039 [W:onnxruntime:Default, device_discovery.cc:146 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+09:01:07  INFO    VAD filter removed 00:03.840 of audio
+09:01:09  INFO    Detected language 'en' with probability 1.00
+09:01:47  INFO        áudio em 'en'
+09:01:48  INFO        ✗ IA descartou
+09:01:48  INFO      ✗ @MarioNawfal 2095413989769384207 (score 2)
+09:01:48  INFO      ✗ @MarioNawfal 2095429087749890328 (score 2)
+09:01:48  INFO      ✗ @MarioNawfal 2095431603724169419 (score 0)
+09:01:48  INFO      ✗ @MarioNawfal 2095436648230027666 (score 0)
+09:01:48  INFO      ✗ @Osint613 2095396126815850834 (score -4)
+09:01:48  INFO      → candidato @Osint613 2095399314939887670 (score 7) — analisando…
+09:01:48  INFO    Processing audio with duration 00:24.985
+09:01:48  INFO    VAD filter removed 00:24.985 of audio
+09:01:50  INFO    Detected language 'en' with probability 0.33
+09:01:50  INFO        áudio em 'en'
+09:01:51  INFO        ✗ IA descartou
+09:01:51  INFO      ✗ @Osint613 2095400397267403206 (score 0)
+09:01:51  INFO      ✗ @Osint613 2095414578679033897 (score 0)
+09:01:51  INFO      → candidato @Osint613 2095429683018178835 (score 9) — analisando…
+09:01:51  INFO    Processing audio with duration 00:43.968
+09:01:51  INFO    VAD filter removed 00:00.016 of audio
+09:01:53  INFO    Detected language 'ru' with probability 0.97
+09:02:02  INFO        áudio em 'ru'
+09:02:05  INFO        ✓ ALERTA enviado
+09:02:05  INFO      ✗ @Osint613 2095430535975969108 (score 2)
+09:02:05  INFO      → candidato @clashreport 2095402813287248169 (score 7) — analisando…
+09:02:05  INFO    Processing audio with duration 00:26.752
+09:02:05  INFO    VAD filter removed 00:00.000 of audio
+09:02:07  INFO    Detected language 'en' with probability 0.99
+09:02:12  INFO        áudio em 'en'
+09:02:14  INFO        ✓ ALERTA enviado
+09:02:14  INFO      → candidato @clashreport 2095403315957793079 (score 7) — analisando…
+09:02:15  INFO    Processing audio with duration 00:40.405
+09:02:15  INFO    VAD filter removed 00:00.000 of audio
+09:02:16  INFO    Detected language 'en' with probability 0.98
+09:02:25  INFO        áudio em 'en'
+09:02:28  INFO        ✓ ALERTA enviado
+09:02:28  INFO      → candidato @clashreport 2095403801897263505 (score 7) — analisando…
+09:02:28  INFO    Processing audio with duration 00:31.211
+09:02:28  INFO    VAD filter removed 00:00.000 of audio
+09:02:30  INFO    Detected language 'en' with probability 0.99
+09:02:38  INFO        áudio em 'en'
+09:02:51  INFO        ✓ ALERTA enviado
+09:02:51  INFO      → candidato @clashreport 2095410960651465059 (score 7) — analisando…
+09:02:51  INFO    Processing audio with duration 02:48.948
+09:02:51  INFO    VAD filter removed 00:00.000 of audio
+09:02:53  INFO    Detected language 'ru' with probability 0.98
+09:03:29  INFO        áudio em 'ru'
+09:03:32  INFO        ✓ ALERTA enviado
+09:03:32  INFO      ✗ @clashreport 2095412713732096446 (score 0)
+09:03:32  INFO      → candidato @clashreport 2095414932627964189 (score 9) — analisando…
+09:03:32  INFO    Processing audio with duration 01:34.848
+09:03:32  INFO    VAD filter removed 00:00.000 of audio
+09:03:34  INFO    Detected language 'he' with probability 0.98
+09:03:57  INFO        áudio em 'he'
+09:03:59  INFO        ✓ ALERTA enviado
+09:03:59  INFO      → candidato @clashreport 2095415687640441336 (score 11) — analisando…
+09:03:59  INFO    Processing audio with duration 01:24.160
+09:03:59  INFO    VAD filter removed 00:00.000 of audio
+09:04:01  INFO    Detected language 'he' with probability 0.99
+09:04:34  INFO        áudio em 'he'
+09:04:36  INFO        ✓ ALERTA enviado
+09:04:36  INFO      → candidato @clashreport 2095415831656010239 (score 7) — analisando…
+09:04:37  INFO    Processing audio with duration 01:12.192
+09:04:37  INFO    VAD filter removed 00:00.000 of audio
+09:04:39  INFO    Detected language 'it' with probability 0.91
+09:04:51  INFO        áudio em 'it'
+09:04:54  INFO        ✓ ALERTA enviado
+09:04:54  INFO      → candidato @clashreport 2095416111458116000 (score 7) — analisando…
+09:04:54  INFO    Processing audio with duration 00:31.253
+09:04:54  INFO    VAD filter removed 00:01.248 of audio
+09:04:56  INFO    Detected language 'he' with probability 1.00
+09:05:05  INFO        áudio em 'he'
+09:05:07  INFO        ✓ ALERTA enviado
+09:05:07  INFO      → candidato @clashreport 2095416782097875241 (score 7) — analisando…
+09:05:07  INFO    Processing audio with duration 01:05.280
+09:05:07  INFO    VAD filter removed 00:00.000 of audio
+09:05:09  INFO    Detected language 'ru' with probability 0.97
+09:05:23  INFO        áudio em 'ru'
+09:05:25  INFO        ✓ ALERTA enviado
+09:05:25  INFO      → candidato @clashreport 2095420341011001461 (score 7) — analisando…
+09:05:25  INFO    Processing audio with duration 01:02.293
+09:05:25  INFO    VAD filter removed 00:00.720 of audio
+09:05:27  INFO    Detected language 'ms' with probability 0.67
+09:05:38  INFO        áudio em 'ms'
+09:05:40  INFO        ✓ ALERTA enviado
+09:05:40  INFO      → candidato @clashreport 2095424886374047936 (score 7) — analisando…
+09:05:40  INFO    Processing audio with duration 00:49.899
+09:05:40  INFO    VAD filter removed 00:00.000 of audio
+09:05:42  INFO    Detected language 'ru' with probability 0.97
+09:05:53  INFO        áudio em 'ru'
+09:05:55  INFO        ✓ ALERTA enviado
+09:05:55  INFO      → candidato @clashreport 2095425484309823942 (score 7) — analisando…
+09:05:55  INFO    Processing audio with duration 00:43.925
+09:05:55  INFO    VAD filter removed 00:00.016 of audio
+09:05:57  INFO    Detected language 'ru' with probability 0.96
+09:06:06  INFO        áudio em 'ru'
+09:06:08  INFO        ✓ ALERTA enviado
+09:06:08  INFO      → candidato @clashreport 2095426026608156828 (score 7) — analisando…
+09:06:08  INFO    Processing audio with duration 00:23.616
+09:06:08  INFO    VAD filter removed 00:00.000 of audio
+09:06:10  INFO    Detected language 'ru' with probability 0.97
+09:06:15  INFO        áudio em 'ru'
+09:06:17  INFO        ✓ ALERTA enviado
+09:06:17  INFO      → candidato @clashreport 2095426387402166652 (score 7) — analisando…
+09:06:17  INFO    Processing audio with duration 00:45.488
+09:06:17  INFO    VAD filter removed 00:00.000 of audio
+09:06:19  INFO    Detected language 'ru' with probability 0.99
+09:06:27  INFO        áudio em 'ru'
+09:06:29  INFO        ✓ ALERTA enviado
+09:06:29  INFO      → candidato @clashreport 2095427341740552193 (score 5) — analisando…
+09:06:29  INFO    Processing audio with duration 00:25.451
+09:06:29  INFO    VAD filter removed 00:00.368 of audio
+09:06:31  INFO    Detected language 'en' with probability 0.96
+09:06:35  INFO        áudio em 'en'
+09:06:37  INFO        ✓ ALERTA enviado
+09:06:37  INFO      → candidato @clashreport 2095427579687711221 (score 9) — analisando…
+09:06:37  INFO    Processing audio with duration 00:23.125
+09:06:37  INFO    VAD filter removed 00:02.784 of audio
+09:06:39  INFO    Detected language 'ru' with probability 0.98
+09:06:43  INFO        áudio em 'ru'
+09:06:44  INFO        ✓ ALERTA enviado
+09:06:44  INFO      ✗ @clashreport 2095432793647878579 (score 0)
+09:06:44  INFO      → candidato @clashreport 2095433812704440539 (score 5) — analisando…
+09:06:45  INFO    Processing audio with duration 00:21.717
+09:06:45  INFO    VAD filter removed 00:00.592 of audio
+09:06:46  INFO    Detected language 'en' with probability 0.72
+09:06:50  INFO        áudio em 'en'
+09:06:52  INFO        ✓ ALERTA enviado
+09:06:52  INFO      → candidato @nexta_tv 2095394996425789601 (score 6) — analisando…
+09:06:52  INFO    Processing audio with duration 00:16.405
+09:06:52  INFO    VAD filter removed 00:00.400 of audio
+09:06:54  INFO    Detected language 'en' with probability 0.97
+09:06:58  INFO        áudio em 'en'
+09:06:58  INFO        ✗ IA descartou
+09:06:58  INFO      → candidato @nexta_tv 2095409536865567176 (score 6) — analisando…
+09:06:59  INFO    Processing audio with duration 01:21.363
+09:06:59  INFO    VAD filter removed 00:24.147 of audio
+09:07:01  INFO    Detected language 'en' with probability 1.00
+09:07:11  INFO        áudio em 'en'
+09:07:12  INFO        ✗ IA descartou
+09:07:12  INFO      → candidato @nexta_tv 2095412729561710973 (score 6) — analisando…
+09:07:13  INFO    Processing audio with duration 00:32.183
+09:07:13  INFO    VAD filter removed 00:00.000 of audio
+09:07:14  INFO    Detected language 'ru' with probability 0.97
+09:07:22  INFO        áudio em 'ru'
+09:07:23  INFO        ✓ ALERTA enviado
+09:07:23  INFO      → candidato @nexta_tv 2095417762629947816 (score 6) — analisando…
+09:07:24  INFO    Processing audio with duration 01:14.397
+09:07:24  INFO    VAD filter removed 00:00.000 of audio
+09:07:26  INFO    Detected language 'en' with probability 0.96
+09:07:40  INFO        áudio em 'en'
+09:07:42  INFO        ✓ ALERTA enviado
+09:07:42  INFO      → candidato @nexta_tv 2095421760455823791 (score 6) — analisando…
+09:07:42  INFO    Processing audio with duration 00:20.294
+09:07:42  INFO    VAD filter removed 00:00.000 of audio
+09:07:44  INFO    Detected language 'ru' with probability 0.97
+09:07:48  INFO        áudio em 'ru'
+09:07:50  INFO        ✓ ALERTA enviado
+09:07:50  INFO      → candidato @nexta_tv 2095427899985715600 (score 7) — analisando…
+09:07:50  INFO    Processing audio with duration 00:15.019
+09:07:50  INFO    VAD filter removed 00:00.000 of audio
+09:07:52  INFO    Detected language 'ru' with probability 0.94
+09:07:55  INFO        áudio em 'ru'
+09:07:57  INFO        ✓ ALERTA enviado
+09:07:57  INFO      ✗ @nexta_tv 2095432861973098513 (score -1)

@@ -1,17 +1,23 @@
-10:31:07  INFO    varrendo 4 perfis…
-    busca unica (4 perfis): 25 posts cobrados (~375 creditos)
-10:31:10  INFO      → candidato @clashreport 2095456056981729739 (score 7) — analisando…
-10:31:11  INFO    HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
-10:31:11  INFO    HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
-10:31:12  INFO    Processing audio with duration 00:34.347
-[0;93m2026-09-03 10:31:12.847204716 [W:onnxruntime:Default, device_discovery.cc:146 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
-10:31:12  INFO    VAD filter removed 00:00.000 of audio
-10:31:14  INFO    Detected language 'en' with probability 0.99
-10:31:21  INFO        áudio em 'en'
-10:31:24  INFO        ✓ ALERTA enviado
-10:31:24  INFO      → candidato @nexta_tv 2095458028049113251 (score 11) — analisando…
-10:31:25  INFO    Processing audio with duration 00:56.889
-10:31:25  INFO    VAD filter removed 00:01.536 of audio
-10:31:27  INFO    Detected language 'ru' with probability 0.97
-10:31:37  INFO        áudio em 'ru'
-10:31:40  INFO        ✓ ALERTA enviado
+10:46:42  INFO    varrendo 4 perfis…
+    busca unica (4 perfis): 28 posts cobrados (~420 creditos)
+10:46:45  INFO      → candidato @MarioNawfal 2095463061238722944 (score 7) — analisando…
+10:46:47  INFO    HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
+10:46:47  INFO    HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
+10:46:48  INFO    Processing audio with duration 00:15.893
+[0;93m2026-09-03 10:46:48.264442217 [W:onnxruntime:Default, device_discovery.cc:146 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+10:46:48  INFO    VAD filter removed 00:00.000 of audio
+10:46:49  INFO    Detected language 'he' with probability 0.94
+10:46:53  INFO        áudio em 'he'
+10:46:53  INFO        ✗ mesmo corte já alertado via @clashreport
+10:46:53  INFO      → candidato @Osint613 2095461698228650375 (score 7) — analisando…
+10:46:53  INFO    Processing audio with duration 01:05.666
+10:46:53  INFO    VAD filter removed 00:00.000 of audio
+10:46:54  INFO    Detected language 'he' with probability 0.89
+10:47:06  INFO        áudio em 'he'
+10:47:15  INFO        ✓ ALERTA enviado
+10:47:15  INFO      → candidato @clashreport 2095463461237015017 (score 7) — analisando…
+10:47:15  INFO    Processing audio with duration 00:26.880
+10:47:15  INFO    VAD filter removed 00:00.000 of audio
+10:47:16  INFO    Detected language 'ru' with probability 0.95
+10:47:30  INFO        áudio em 'ru'
+10:47:32  INFO        ✓ ALERTA enviado

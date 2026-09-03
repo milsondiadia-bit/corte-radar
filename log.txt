@@ -1,41 +1,35 @@
-18:31:27  INFO    varrendo 4 perfis…
-    busca unica (4 perfis): 21 posts cobrados (~315 creditos)
-18:31:30  INFO      → candidato @MarioNawfal 2095579073322033286 (score 9) — analisando…
-18:31:32  INFO    HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
-18:31:32  INFO    HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
-18:31:33  INFO    Processing audio with duration 02:47.019
-[0;93m2026-09-03 18:31:33.357832065 [W:onnxruntime:Default, device_discovery.cc:146 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
-18:31:33  INFO    VAD filter removed 00:00.000 of audio
-18:31:35  INFO    Detected language 'en' with probability 0.94
-18:32:09  INFO        áudio em 'en'
-18:32:20  INFO        ✓ ALERTA enviado
-18:32:20  INFO      → candidato @clashreport 2095577429188166140 (score 13) — analisando…
-18:32:20  INFO    Processing audio with duration 00:23.744
-18:32:20  INFO    VAD filter removed 00:00.000 of audio
-18:32:22  INFO    Detected language 'en' with probability 1.00
-18:32:27  INFO        áudio em 'en'
-18:32:29  INFO        ✓ ALERTA enviado
-18:32:29  INFO      → candidato @clashreport 2095577725922574526 (score 7) — analisando…
-18:32:29  INFO    Processing audio with duration 00:37.845
-18:32:29  INFO    VAD filter removed 00:00.000 of audio
-18:32:31  INFO    Detected language 'en' with probability 1.00
-18:32:41  INFO        áudio em 'en'
-18:32:43  INFO        ✓ ALERTA enviado
-18:32:43  INFO      → candidato @clashreport 2095579317258338461 (score 7) — analisando…
-18:32:44  INFO    Processing audio with duration 00:14.464
-18:32:44  INFO    VAD filter removed 00:00.000 of audio
-18:32:45  INFO    Detected language 'en' with probability 0.99
-18:32:49  INFO        áudio em 'en'
-18:32:52  INFO        ✓ ALERTA enviado
-18:32:52  INFO      → candidato @clashreport 2095580169792569420 (score 13) — analisando…
-18:32:52  INFO    Processing audio with duration 00:38.357
-18:32:52  INFO    VAD filter removed 00:00.000 of audio
-18:32:54  INFO    Detected language 'en' with probability 1.00
-18:33:46  INFO        áudio em 'en'
-18:33:48  INFO        ✓ ALERTA enviado
-18:33:48  INFO      → candidato @nexta_tv 2095580083767660926 (score 4) — analisando…
-18:33:50  INFO    Processing audio with duration 00:35.480
-18:33:50  INFO    VAD filter removed 00:04.736 of audio
-18:33:51  INFO    Detected language 'ru' with probability 0.96
-18:33:58  INFO        áudio em 'ru'
-18:34:04  INFO        ✗ IA descartou
+18:46:55  INFO    varrendo 4 perfis…
+    busca unica (4 perfis): 26 posts cobrados (~390 creditos)
+18:46:58  INFO      → candidato @MarioNawfal 2095580582336160183 (score 5) — analisando…
+18:47:00  INFO    HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
+18:47:00  INFO    HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
+18:47:01  INFO    Processing audio with duration 02:47.019
+[0;93m2026-09-03 18:47:01.283722297 [W:onnxruntime:Default, device_discovery.cc:146 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+18:47:01  INFO    VAD filter removed 00:00.000 of audio
+18:47:02  INFO    Detected language 'en' with probability 0.95
+18:47:26  INFO        áudio em 'en'
+18:47:26  INFO        ✗ mesmo corte já alertado via @MarioNawfal
+18:47:26  INFO      → candidato @clashreport 2095581733244613047 (score 7) — analisando…
+18:47:27  INFO    Processing audio with duration 00:27.861
+18:47:27  INFO    VAD filter removed 00:00.000 of audio
+18:47:28  INFO    Detected language 'en' with probability 0.99
+18:47:33  INFO        áudio em 'en'
+18:47:36  INFO        ✓ ALERTA enviado
+18:47:36  INFO      → candidato @clashreport 2095582329125183516 (score 7) — analisando…
+18:47:36  INFO    Processing audio with duration 00:27.157
+18:47:37  INFO    VAD filter removed 00:00.000 of audio
+18:47:38  INFO    Detected language 'en' with probability 0.99
+18:47:43  INFO        áudio em 'en'
+18:47:45  INFO        ✓ ALERTA enviado
+18:47:45  INFO      → candidato @clashreport 2095583273162322010 (score 4) — analisando…
+18:47:45  INFO    Processing audio with duration 00:34.539
+18:47:46  INFO    VAD filter removed 00:01.952 of audio
+18:47:47  INFO    Detected language 'sr' with probability 0.43
+18:47:59  INFO        áudio em 'sr'
+18:48:00  INFO        ✗ IA descartou
+18:48:00  INFO      → candidato @clashreport 2095583896389779694 (score 6) — analisando…
+18:48:01  INFO    Processing audio with duration 01:02.443
+18:48:01  INFO    VAD filter removed 00:00.000 of audio
+18:48:02  INFO    Detected language 'he' with probability 0.99
+18:48:14  INFO        áudio em 'he'
+18:48:17  INFO        ✓ ALERTA enviado

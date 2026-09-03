@@ -1,20 +1,30 @@
-11:01:19  INFO    varrendo 4 perfis…
-    busca unica (4 perfis): 9 posts cobrados (~135 creditos)
-11:01:21  INFO      ✗ @MarioNawfal 2095464319320211865 (score 0)
-11:01:21  INFO      ✗ @MarioNawfal 2095466842684821562 (score 0)
-11:01:21  INFO      → candidato @clashreport 2095464366975959258 (score 7) — analisando…
-11:01:22  INFO    HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
-11:01:22  INFO    HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
-11:01:23  INFO    Processing audio with duration 00:46.549
-[0;93m2026-09-03 11:01:23.619666031 [W:onnxruntime:Default, device_discovery.cc:146 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/VMBUS:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
-11:01:23  INFO    VAD filter removed 00:00.000 of audio
-11:01:25  INFO    Detected language 'ru' with probability 0.96
-11:01:32  INFO        áudio em 'ru'
-11:01:44  INFO        ✓ ALERTA enviado
-11:01:44  INFO      → candidato @clashreport 2095466989728776523 (score 5) — analisando…
-11:01:44  INFO    Processing audio with duration 00:43.349
-11:01:44  INFO    VAD filter removed 00:03.360 of audio
-11:01:46  INFO    Detected language 'hy' with probability 0.90
-11:02:12  INFO        áudio em 'hy'
-11:02:14  INFO        ✓ ALERTA enviado
-11:02:14  INFO      ✗ @nexta_tv 2095464319446061106 (score 0)
+11:16:05  INFO    varrendo 4 perfis…
+    busca unica (4 perfis): 13 posts cobrados (~195 creditos)
+11:16:08  INFO      ✗ @clashreport 2095468524831395965 (score 0)
+11:16:08  INFO      → candidato @clashreport 2095468767010603426 (score 7) — analisando…
+11:16:09  INFO    HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
+11:16:09  INFO    HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
+11:16:10  INFO    Processing audio with duration 00:14.357
+[0;93m2026-09-03 11:16:10.334747282 [W:onnxruntime:Default, device_discovery.cc:146 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+11:16:10  INFO    VAD filter removed 00:00.000 of audio
+11:16:12  INFO    Detected language 'en' with probability 0.97
+11:16:15  INFO        áudio em 'en'
+11:16:17  INFO        ✓ ALERTA enviado
+11:16:17  INFO      → candidato @clashreport 2095469655838130211 (score 13) — analisando…
+11:16:17  INFO    Processing audio with duration 00:40.661
+11:16:17  INFO    VAD filter removed 00:00.000 of audio
+11:16:19  INFO    Detected language 'en' with probability 0.74
+11:16:29  INFO        áudio em 'en'
+11:16:39  INFO        ✓ ALERTA enviado
+11:16:39  INFO      → candidato @clashreport 2095469876055773575 (score 7) — analisando…
+11:16:39  INFO    Processing audio with duration 00:46.293
+11:16:40  INFO    VAD filter removed 00:02.688 of audio
+11:16:41  INFO    Detected language 'de' with probability 0.89
+11:16:48  INFO        áudio em 'de'
+11:17:10  INFO        ✓ ALERTA enviado
+11:17:10  INFO      → candidato @clashreport 2095470231036498252 (score 7) — analisando…
+11:17:10  INFO    Processing audio with duration 00:21.845
+11:17:10  INFO    VAD filter removed 00:00.240 of audio
+11:17:12  INFO    Detected language 'en' with probability 0.98
+11:17:17  INFO        áudio em 'en'
+11:17:19  INFO        ✓ ALERTA enviado

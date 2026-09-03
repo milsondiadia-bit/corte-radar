@@ -1,11 +1,11 @@
-16:01:14  INFO    varrendo 4 perfis…
-    busca unica (4 perfis): 10 posts cobrados (~150 creditos)
-16:01:16  INFO      → candidato @nexta_tv 2095542334251544721 (score 6) — analisando…
-16:01:19  INFO    HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
-16:01:19  INFO    HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
-16:01:20  INFO    Processing audio with duration 01:27.748
-[0;93m2026-09-03 16:01:20.619804984 [W:onnxruntime:Default, device_discovery.cc:146 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
-16:01:20  INFO    VAD filter removed 00:40.020 of audio
-16:01:22  INFO    Detected language 'de' with probability 0.99
-16:01:33  INFO        áudio em 'de'
-16:01:41  INFO        ✓ ALERTA enviado
+16:16:06  INFO    varrendo 4 perfis…
+    busca unica (4 perfis): 11 posts cobrados (~165 creditos)
+16:16:08  INFO      → candidato @clashreport 2095546050656248042 (score 7) — analisando…
+16:16:09  INFO    HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
+16:16:09  INFO    HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
+16:16:10  INFO    Processing audio with duration 01:45.651
+[0;93m2026-09-03 16:16:10.445396842 [W:onnxruntime:Default, device_discovery.cc:146 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+16:16:10  INFO    VAD filter removed 00:03.875 of audio
+16:16:12  INFO    Detected language 'he' with probability 0.94
+16:17:07  INFO        áudio em 'he'
+16:17:10  INFO        ✓ ALERTA enviado

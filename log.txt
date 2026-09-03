@@ -1,11 +1,18 @@
-12:15:59  INFO    varrendo 4 perfis…
-    busca unica (4 perfis): 28 posts cobrados (~420 creditos)
-12:16:02  INFO      → candidato @nexta_tv 2095485093401833636 (score 6) — analisando…
-12:16:03  INFO    HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
-12:16:03  INFO    HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
-12:16:04  INFO    Processing audio with duration 00:34.965
-[0;93m2026-09-03 12:16:04.549828482 [W:onnxruntime:Default, device_discovery.cc:146 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
-12:16:04  INFO    VAD filter removed 00:00.000 of audio
-12:16:06  INFO    Detected language 'ru' with probability 0.98
-12:16:14  INFO        áudio em 'ru'
-12:16:19  INFO        ✓ ALERTA enviado
+12:31:22  INFO    varrendo 4 perfis…
+    busca unica (4 perfis): 31 posts cobrados (~465 creditos)
+12:31:25  INFO      → candidato @Osint613 2095486816937726464 (score 6) — analisando…
+12:31:26  INFO    HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
+12:31:26  INFO    HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
+12:31:27  INFO    Processing audio with duration 02:05.312
+[0;93m2026-09-03 12:31:27.770581810 [W:onnxruntime:Default, device_discovery.cc:146 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+12:31:28  INFO    VAD filter removed 00:06.752 of audio
+12:31:29  INFO    Detected language 'en' with probability 0.74
+12:31:43  INFO        áudio em 'en'
+12:31:48  INFO        ✓ ALERTA enviado
+12:31:48  INFO      → candidato @Osint613 2095488565710819531 (score 5) — analisando…
+12:31:48  INFO    Processing audio with duration 00:52.082
+12:31:49  INFO    VAD filter removed 00:00.000 of audio
+12:31:50  INFO    Detected language 'en' with probability 1.00
+12:32:01  INFO        áudio em 'en'
+12:32:10  INFO        ✓ ALERTA enviado
+12:32:10  INFO      ✗ @Osint613 2095488642256912856 (score 0)

@@ -1,3 +1,3 @@
-22:31:06  INFO    varrendo 4 perfis…
-    busca unica (4 perfis): 25 posts cobrados (~375 creditos)
-22:31:09  INFO      ✗ @MarioNawfal 2095640484890677250 (score 0)
+22:46:19  INFO    varrendo 4 perfis…
+    busca unica (4 perfis): 26 posts cobrados (~390 creditos)
+22:46:22  INFO      ✗ @Osint613 2095641254574817696 (score 2)

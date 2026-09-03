@@ -1,39 +1,5 @@
-19:16:28  INFO    varrendo 4 perfis…
-    busca unica (4 perfis): 20 posts cobrados (~300 creditos)
-19:16:30  INFO      → candidato @Osint613 2095589337362735567 (score 4) — analisando…
-19:16:31  INFO    HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
-19:16:31  INFO    HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
-19:16:31  INFO    Processing audio with duration 01:44.704
-[0;93m2026-09-03 19:16:31.957595693 [W:onnxruntime:Default, device_discovery.cc:146 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
-19:16:32  INFO    VAD filter removed 00:00.000 of audio
-19:16:33  INFO    Detected language 'en' with probability 0.94
-19:16:57  INFO        áudio em 'en'
-19:17:07  INFO        ✓ ALERTA enviado
-19:17:07  INFO      → candidato @clashreport 2095587953984541042 (score 7) — analisando…
-19:17:07  INFO    Processing audio with duration 00:38.059
-19:17:07  INFO    VAD filter removed 00:00.000 of audio
-19:17:08  INFO    Detected language 'uk' with probability 0.83
-19:17:13  INFO        áudio em 'uk'
-19:17:23  WARNING     classificação falhou: Gemini falhou (404 em v1: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-flash-lite-latest is not found for API version v1, or is not supported for generateConte). Modelo: gemini-flash-lite-latest
-19:17:23  INFO        ✗ IA nao respondeu — nao envio sem analise
-19:17:24  INFO      → candidato @clashreport 2095588548229419014 (score 7) — analisando…
-19:17:24  INFO    Processing audio with duration 00:20.352
-19:17:24  INFO    VAD filter removed 00:00.000 of audio
-19:17:25  INFO    Detected language 'uk' with probability 0.99
-19:17:28  INFO        áudio em 'uk'
-19:17:30  INFO        ✓ ALERTA enviado
-19:17:30  INFO      → candidato @clashreport 2095590148582858987 (score 7) — analisando…
-19:17:30  INFO    Processing audio with duration 00:31.253
-19:17:30  INFO    VAD filter removed 00:03.040 of audio
-19:17:31  INFO    Detected language 'en' with probability 0.75
-19:17:35  INFO        áudio em 'en'
-19:17:35  INFO        ✗ mesmo corte já alertado via @MarioNawfal
-19:17:36  INFO      → candidato @clashreport 2095590665237205088 (score 7) — analisando…
-19:17:36  INFO    Processing audio with duration 00:59.563
-19:17:36  INFO    VAD filter removed 00:07.680 of audio
-19:17:37  INFO    Detected language 'en' with probability 0.96
-19:17:44  INFO        áudio em 'en'
-19:17:46  INFO        ✓ ALERTA enviado
+19:31:12  INFO    varrendo 4 perfis…
+    busca unica (4 perfis): 23 posts cobrados (~345 creditos)
+19:31:16  INFO      ✗ @MarioNawfal 2095593355568886117 (score -1)
+19:31:16  INFO      ✗ @MarioNawfal 2095595182104142096 (score 0)
+19:31:16  INFO      ✗ @nexta_tv 2095595182703989010 (score 0)

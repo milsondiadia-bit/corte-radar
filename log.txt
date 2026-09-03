@@ -1,4 +1,2 @@
-13:16:00  INFO    varrendo 4 perfis…
-    busca unica (4 perfis): 13 posts cobrados (~195 creditos)
-13:16:02  INFO      ✗ @clashreport 2095497994581717348 (score -1)
-13:16:02  INFO      ✗ @nexta_tv 2095500588326818078 (score 2)
+13:31:50  INFO    varrendo 4 perfis…
+    busca unica (4 perfis): 4 posts cobrados (~60 creditos)

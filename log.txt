@@ -1,31 +1,11 @@
-12:01:00  INFO    varrendo 4 perfis…
-    busca unica (4 perfis): 27 posts cobrados (~405 creditos)
-12:01:04  INFO      ✗ @MarioNawfal 2095479418915377241 (score 2)
-12:01:04  INFO      → candidato @clashreport 2095478684547158307 (score 7) — analisando…
-12:01:05  INFO    HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
-12:01:05  INFO    HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
-12:01:06  INFO    Processing audio with duration 00:42.453
-[0;93m2026-09-03 12:01:06.776449044 [W:onnxruntime:Default, device_discovery.cc:146 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
-12:01:06  INFO    VAD filter removed 00:00.000 of audio
-12:01:08  INFO    Detected language 'ru' with probability 0.98
-12:01:16  INFO        áudio em 'ru'
-12:02:13  INFO        ✓ ALERTA enviado
-12:02:13  INFO      → candidato @clashreport 2095479168582504743 (score 7) — analisando…
-12:02:13  INFO    Processing audio with duration 00:35.264
-12:02:13  INFO    VAD filter removed 00:00.000 of audio
-12:02:15  INFO    Detected language 'ru' with probability 0.97
-12:02:21  INFO        áudio em 'ru'
-12:02:57  INFO        ✓ ALERTA enviado
-12:02:57  INFO      → candidato @clashreport 2095481496098243055 (score 4) — analisando…
-12:02:57  INFO    Processing audio with duration 00:20.245
-12:02:57  INFO    VAD filter removed 00:05.157 of audio
-12:02:59  INFO    Detected language 'en' with probability 0.66
-12:03:02  INFO        áudio em 'en'
-12:04:03  WARNING     classificação falhou: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
-12:04:03  INFO        ✗ IA nao respondeu — nao envio sem analise
-12:04:03  INFO      → candidato @nexta_tv 2095478468351844479 (score 6) — analisando…
-12:04:03  INFO    Processing audio with duration 00:40.448
-12:04:03  INFO    VAD filter removed 00:08.240 of audio
-12:04:05  INFO    Detected language 'en' with probability 0.56
-12:04:11  INFO        áudio em 'en'
-12:04:14  INFO        ✓ ALERTA enviado
+12:15:59  INFO    varrendo 4 perfis…
+    busca unica (4 perfis): 28 posts cobrados (~420 creditos)
+12:16:02  INFO      → candidato @nexta_tv 2095485093401833636 (score 6) — analisando…
+12:16:03  INFO    HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
+12:16:03  INFO    HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
+12:16:04  INFO    Processing audio with duration 00:34.965
+[0;93m2026-09-03 12:16:04.549828482 [W:onnxruntime:Default, device_discovery.cc:146 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+12:16:04  INFO    VAD filter removed 00:00.000 of audio
+12:16:06  INFO    Detected language 'ru' with probability 0.98
+12:16:14  INFO        áudio em 'ru'
+12:16:19  INFO        ✓ ALERTA enviado

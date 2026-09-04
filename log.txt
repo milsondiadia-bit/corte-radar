@@ -1,3 +1,41 @@
-17:45:51  INFO    varrendo 4 perfis…
-    busca unica (4 perfis): 6 posts cobrados (~90 creditos)
-17:45:53  INFO      ✗ @MarioNawfal 2095931145628111342 (score 0)
+18:01:16  INFO    varrendo 4 perfis…
+    busca unica (4 perfis): 10 posts cobrados (~150 creditos)
+18:01:19  INFO      → candidato @clashreport 2095932195730866332 (score 7) — analisando…
+18:01:20  INFO    HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
+18:01:20  INFO    HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
+18:01:21  INFO    Processing audio with duration 00:41.280
+[0;93m2026-09-04 18:01:21.123047647 [W:onnxruntime:Default, device_discovery.cc:146 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+18:01:21  INFO    VAD filter removed 00:00.000 of audio
+18:01:22  INFO    Detected language 'he' with probability 0.96
+18:01:32  INFO        áudio em 'he'
+18:01:33  WARNING     classificação falhou: Gemini falhou (404 em v1: {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-flash-lite-latest is not found for API version v1, or is not supported for generateConte). Modelo: gemini-flash-lite-latest
+18:01:33  INFO        ✗ IA nao respondeu — nao envio sem analise
+18:01:33  INFO      → candidato @clashreport 2095932629870625162 (score 7) — analisando…
+18:01:33  INFO    Processing audio with duration 00:39.808
+18:01:33  INFO    VAD filter removed 00:00.000 of audio
+18:01:34  INFO    Detected language 'he' with probability 0.97
+18:01:43  INFO        áudio em 'he'
+18:02:15  INFO        ✓ ALERTA enviado
+18:02:15  INFO      → candidato @clashreport 2095934180400017873 (score 7) — analisando…
+18:02:15  INFO    Processing audio with duration 01:18.997
+18:02:15  INFO    VAD filter removed 00:00.000 of audio
+18:02:16  INFO    Detected language 'he' with probability 0.99
+18:02:38  INFO        áudio em 'he'
+18:02:39  WARNING     classificação falhou: Gemini falhou (404 em v1: {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-flash-lite-latest is not found for API version v1, or is not supported for generateConte). Modelo: gemini-flash-lite-latest
+18:02:39  INFO        ✗ IA nao respondeu — nao envio sem analise
+18:02:39  INFO      → candidato @clashreport 2095934865313083665 (score 9) — analisando…
+18:02:40  INFO    Processing audio with duration 00:52.245
+18:02:40  INFO    VAD filter removed 00:00.000 of audio
+18:02:41  INFO    Detected language 'he' with probability 0.99
+18:03:07  INFO        áudio em 'he'
+18:03:07  WARNING     classificação falhou: Gemini falhou (404 em v1: {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-flash-lite-latest is not found for API version v1, or is not supported for generateConte). Modelo: gemini-flash-lite-latest
+18:03:07  INFO        ✗ IA nao respondeu — nao envio sem analise

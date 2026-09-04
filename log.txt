@@ -1,17 +1,2 @@
-16:16:04  INFO    varrendo 4 perfis…
-    busca unica (4 perfis): 16 posts cobrados (~240 creditos)
-16:16:07  INFO      ✗ @Osint613 2095906003120173429 (score -4)
-16:16:07  INFO      ✗ @clashreport 2095905295696343509 (score 2)
-16:16:07  INFO      → candidato @clashreport 2095908161769153019 (score 7) — analisando…
-16:16:07  INFO    HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
-16:16:07  INFO    HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
-16:16:09  INFO    Processing audio with duration 03:15.861
-[0;93m2026-09-04 16:16:09.144862328 [W:onnxruntime:Default, device_discovery.cc:146 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
-16:16:09  INFO    VAD filter removed 00:00.784 of audio
-16:16:10  INFO    Detected language 'uk' with probability 0.42
-16:16:52  INFO        áudio em 'uk'
-16:16:53  WARNING     classificação falhou: Gemini falhou (404 em v1: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-flash-lite-latest is not found for API version v1, or is not supported for generateConte). Modelo: gemini-flash-lite-latest
-16:16:53  INFO        ✗ IA nao respondeu — nao envio sem analise
+16:46:12  INFO    varrendo 4 perfis…
+    busca unica (4 perfis): 6 posts cobrados (~90 creditos)

@@ -1,3 +1,3 @@
-13:02:32  INFO    varrendo 4 perfis…
-    busca unica (4 perfis): 27 posts cobrados (~405 creditos)
-13:02:36  INFO      ✗ @clashreport 2095859764928332232 (score 3)
+13:16:19  INFO    varrendo 4 perfis…
+    busca unica (4 perfis): 28 posts cobrados (~420 creditos)
+13:16:22  INFO      ✗ @clashreport 2095860915740570027 (score 0)

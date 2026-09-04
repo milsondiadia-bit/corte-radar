@@ -1,19 +1,12 @@
-10:15:51  INFO    varrendo 4 perfis…
-    busca unica (4 perfis): 12 posts cobrados (~180 creditos)
-10:15:52  INFO      → candidato @clashreport 2095816567531405801 (score 7) — analisando…
-10:15:53  INFO    HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
-10:15:53  INFO    HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
-10:15:54  INFO    Processing audio with duration 00:41.771
-[0;93m2026-09-04 10:15:54.505762190 [W:onnxruntime:Default, device_discovery.cc:146 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
-10:15:54  INFO    VAD filter removed 00:00.272 of audio
-10:15:56  INFO    Detected language 'tr' with probability 0.99
-10:16:03  INFO        áudio em 'tr'
-10:16:43  INFO        ✓ ALERTA enviado
-10:16:43  INFO      ✗ @clashreport 2095816669452984640 (score 3)
-10:16:43  INFO      → candidato @clashreport 2095817936464142458 (score 7) — analisando…
-10:16:43  INFO    Processing audio with duration 01:07.861
-10:16:43  INFO    VAD filter removed 00:01.728 of audio
-10:16:45  INFO    Detected language 'tr' with probability 0.70
-10:16:56  INFO        áudio em 'tr'
-10:16:59  INFO        ✓ ALERTA enviado
-10:16:59  INFO      ✗ @nexta_tv 2095816186785132677 (score -1)
+10:31:13  INFO    varrendo 4 perfis…
+    busca unica (4 perfis): 14 posts cobrados (~210 creditos)
+10:31:15  INFO      → candidato @clashreport 2095818431274664314 (score 4) — analisando…
+10:31:16  INFO    HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
+10:31:16  INFO    HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
+10:31:17  INFO    Processing audio with duration 00:40.240
+[0;93m2026-09-04 10:31:17.975451411 [W:onnxruntime:Default, device_discovery.cc:146 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+10:31:18  INFO    VAD filter removed 00:05.296 of audio
+10:31:19  INFO    Detected language 'he' with probability 0.98
+10:31:31  INFO        áudio em 'he'
+10:31:40  INFO        ✓ ALERTA enviado
+10:31:40  INFO      ✗ @clashreport 2095819764518060153 (score 2)

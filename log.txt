@@ -1,25 +1,4 @@
-12:16:30  INFO    varrendo 4 perfis…
-    busca unica (4 perfis): 23 posts cobrados (~345 creditos)
-12:16:33  INFO      → candidato @clashreport 2095846588853727496 (score 7) — analisando…
-12:16:35  INFO    HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
-12:16:35  INFO    HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
-12:16:35  INFO    Processing audio with duration 00:54.357
-[0;93m2026-09-04 12:16:35.769112616 [W:onnxruntime:Default, device_discovery.cc:146 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
-12:16:35  INFO    VAD filter removed 00:00.000 of audio
-12:16:36  INFO    Detected language 'en' with probability 0.76
-12:16:43  INFO        áudio em 'en'
-12:16:44  WARNING     classificação falhou: Gemini falhou (404 em v1: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-flash-lite-latest is not found for API version v1, or is not supported for generateConte). Modelo: gemini-flash-lite-latest
-12:16:44  INFO        ✗ IA nao respondeu — nao envio sem analise
-12:16:44  INFO      → candidato @clashreport 2095847603837530475 (score 7) — analisando…
-12:16:45  INFO    Processing audio with duration 00:28.032
-12:16:45  INFO    VAD filter removed 00:00.080 of audio
-12:16:45  INFO    Detected language 'hi' with probability 0.97
-12:16:48  INFO        áudio em 'hi'
-12:16:49  WARNING     classificação falhou: Gemini falhou (404 em v1: {
-  "error": {
-    "code": 404,
-    "message": "models/gemini-flash-lite-latest is not found for API version v1, or is not supported for generateConte). Modelo: gemini-flash-lite-latest
-12:16:49  INFO        ✗ IA nao respondeu — nao envio sem analise
+12:31:05  INFO    varrendo 4 perfis…
+    busca unica (4 perfis): 25 posts cobrados (~375 creditos)
+12:31:08  INFO      ✗ @MarioNawfal 2095850615494615141 (score 0)
+12:31:08  INFO      ✗ @nexta_tv 2095851874167763220 (score 0)
